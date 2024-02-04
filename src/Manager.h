@@ -17,6 +17,7 @@
 + (BOOL)keepDeletedMessage;
 + (BOOL)hideLastSeen;
 + (BOOL)hideReelsTab;
++ (BOOL)removeExplorePosts;
 + (BOOL)noScreenShotAlert;
 + (BOOL)unlimitedReplay;
 + (BOOL)noSeenReceipt;

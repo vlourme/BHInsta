@@ -47,6 +47,9 @@
 + (BOOL)hideReelsTab {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_reels_tab"];
 }
++ (BOOL)removeExplorePosts {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_explore_posts"];
+}
 + (BOOL)noScreenShotAlert {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_screenshot_alert"];
 }

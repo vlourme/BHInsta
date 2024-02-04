@@ -161,6 +161,16 @@ static BOOL isAuthenticationShowed = FALSE;
 }
 %end
 
+// Disable Explore Posts
+%hook IGExploreGridViewController
+- (id)view {
+    if ([BHIManager removeExplorePosts]) {
+        return nil;
+    }
+    return %orig;
+}
+%end
+
 // Hide Reels tab
 %hook IGTabBar
 - (void)didMoveToWindow {
