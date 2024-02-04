@@ -1,4 +1,4 @@
-TARGET := iphone:clang:14.0
+TARGET := iphone:clang:14.5
 INSTALL_TARGET_PROCESSES = SpringBoard
 
 include $(THEOS)/makefiles/common.mk
@@ -13,4 +13,6 @@ BHInsta_CFLAGS = -fobjc-arc -Wno-unsupported-availability-guard -Wno-unused-valu
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
-SUBPROJECTS += libflex keychainfix
+SUBPROJECTS += modules/libflex modules/keychainfix
+
+include $(THEOS_MAKE_PATH)/aggregate.mk
