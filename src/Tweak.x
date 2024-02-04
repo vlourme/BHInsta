@@ -38,6 +38,12 @@ static NSArray *removeAdsItemsInList(NSArray *list) {
             }
         }
 
+        if ([BHIManager hideSuggestedReels]) {
+            if ([obj respondsToSelector:@selector(accessibilityLabel)] && [[obj accessibilityLabel] isEqualToString:@"Suggested reels"]) {
+                [orig removeObjectAtIndex:idx];
+            }
+        }
+
         if (([obj isKindOfClass:%c(IGFeedItem)] && ([obj isSponsored] || [obj isSponsoredApp])) || [obj isKindOfClass:%c(IGAdItem)]) {
             [orig removeObjectAtIndex:idx];
         }
@@ -117,6 +123,21 @@ static BOOL isAuthenticationShowed = FALSE;
     } else {
         return %orig;
     }
+}
+%end
+
+// Hide suggested reels
+%hook _IGListScrollWhileAnimateCollectionView
+- (void)_didModifySections:(id)arg1 {
+    if ([BHIManager hideSuggestedReels]) {
+        for (UIView *subview in self.subviews) {
+            if ([subview respondsToSelector:@selector(accessibilityLabel)] && [[subview accessibilityLabel] isEqualToString:@"Suggested reels"]) {
+                [subview setHidden:YES];
+            }
+        }
+    }
+
+    return %orig;
 }
 %end
 

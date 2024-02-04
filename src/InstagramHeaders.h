@@ -20,6 +20,12 @@
 - (id)initWithReuseIdentifier:(NSString *)identifier;
 @end
 
+@interface IGListCollectionView: UICollectionView
+@end
+
+@interface _IGListScrollWhileAnimateCollectionView: IGListCollectionView
+@end
+
 @interface IGProfileSheetTableViewCell: IGTableViewCell
 @end
 

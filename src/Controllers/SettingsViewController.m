@@ -112,7 +112,8 @@
             // Section 5: Focus mode
             [self newSectionWithTitle:@"Focus mode" footer:nil],
             [self newSwitchCellWithTitle:@"Hide Reels tab" detailTitle:@"Remove the access to Instagram Reels feed" key:@"remove_reels_tab" defaultValue:false changeAction:nil],
-            [self newSwitchCellWithTitle:@"Remove Explore posts" detailTitle:@"Remove every posts in Explore tab (search still works)." key:@"remove_explore_posts" defaultValue:false changeAction:nil],
+            [self newSwitchCellWithTitle:@"Remove Explore posts" detailTitle:@"Remove every posts in Explore tab (search still works)" key:@"remove_explore_posts" defaultValue:false changeAction:nil],
+            [self newSwitchCellWithTitle:@"Hide suggested reels" detailTitle:@"Hide suggested reels in main feed" key:@"remove_suggested_reels" defaultValue:false changeAction:nil],
 
             // Section 6: Security
             [self newSectionWithTitle:@"Security" footer:nil],

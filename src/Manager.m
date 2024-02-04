@@ -50,6 +50,9 @@
 + (BOOL)removeExplorePosts {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_explore_posts"];
 }
++ (BOOL)hideSuggestedReels {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_suggested_reels"];
+}
 + (BOOL)noScreenShotAlert {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_screenshot_alert"];
 }
