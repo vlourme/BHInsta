@@ -161,6 +161,22 @@ static BOOL isAuthenticationShowed = FALSE;
 }
 %end
 
+// Hide Reels tab
+%hook IGTabBar
+- (void)didMoveToWindow {
+    %orig;
+
+    if ([BHIManager hideReelsTab]) {
+        NSMutableArray *tabButtons = [self valueForKey:@"_tabButtons"];
+        if ([tabButtons count] == 5) {
+            [tabButtons removeObjectAtIndex:3];
+        }
+
+        [self.subviews[4] setHidden:YES];
+    }
+}
+%end
+
 // Unlimited story replay
 %hook IGStoryPhotoView
 - (void)progressImageView:(id)arg1 didLoadImage:(id)arg2 loadSource:(id)arg3 networkRequestSummary:(id)arg4 {

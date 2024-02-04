@@ -44,6 +44,9 @@
 + (BOOL)hideLastSeen {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_lastseen"];
 }
++ (BOOL)hideReelsTab {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_reels_tab"];
+}
 + (BOOL)noScreenShotAlert {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_screenshot_alert"];
 }

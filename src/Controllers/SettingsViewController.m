@@ -109,11 +109,15 @@
             [self newSwitchCellWithTitle:@"Unlimited replay of once story" detailTitle:@"Unlimited replay of once story in direct chat" key:@"unlimited_replay" defaultValue:false changeAction:nil],
             [self newSwitchCellWithTitle:@"Disable Story Seen Receipt" detailTitle:nil key:@"no_seen_receipt" defaultValue:false changeAction:nil],
 
-            // Section 5: Security
+            // Section 5: Focus mode
+            [self newSectionWithTitle:@"Focus mode" footer:nil],
+            [self newSwitchCellWithTitle:@"Hide Reels tab" detailTitle:@"Remove the access to Instagram Reels feed" key:@"remove_reels_tab" defaultValue:false changeAction:nil],
+
+            // Section 6: Security
             [self newSectionWithTitle:@"Security" footer:nil],
             [self newSwitchCellWithTitle:@"Padlock" detailTitle:@"Lock Instagram with biometrics/password" key:@"padlock" defaultValue:false changeAction:nil],
 
-            // Section 6: Debugging
+            // Section 7: Debugging
             [self newSectionWithTitle:@"Debugging" footer:nil],
             [self newSwitchCellWithTitle:@"Enable FLEX" detailTitle:@"Show FLEX on instagram app." key:@"flex_instagram" defaultValue:false changeAction:@selector(FLEXAction:)],
 

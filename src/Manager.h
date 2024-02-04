@@ -16,6 +16,7 @@
 + (BOOL)Padlock;
 + (BOOL)keepDeletedMessage;
 + (BOOL)hideLastSeen;
++ (BOOL)hideReelsTab;
 + (BOOL)noScreenShotAlert;
 + (BOOL)unlimitedReplay;
 + (BOOL)noSeenReceipt;

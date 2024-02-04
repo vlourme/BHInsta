@@ -14,6 +14,7 @@ An awesome tweak for Instagram!
 - Remove screenshot alert
 - Unlimited replay of once story
 - Disable Story Seen Receipt
+- [WIP] Focus mode (hide reels, explore, suggested reels and profile, etc.)
 - Padlock
 
 # Building
