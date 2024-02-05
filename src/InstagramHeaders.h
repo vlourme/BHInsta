@@ -20,6 +20,15 @@
 - (id)initWithReuseIdentifier:(NSString *)identifier;
 @end
 
+@interface IGBaseView: UIView
+@end
+
+@interface IGCustomHeaderView: IGBaseView
+@end
+
+@interface IGProfileNavigationHeaderView: IGCustomHeaderView
+@end
+
 @interface IGListCollectionView: UICollectionView
 @end
 

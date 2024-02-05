@@ -17,6 +17,13 @@ An awesome tweak for Instagram!
 - [WIP] Focus mode (hide reels, explore, suggested reels and profile, etc.)
 - Padlock
 
+### Accessing the settings
+
+Tweak settings are accessible by going on your profile and tapping the "three horizontal lines" button on the top right corner.
+
+However, depending on your version, sometimes, a menu will not appear but directly "Settings and Activity".
+In this case, go back and do a long press on the horizontal lines button to access the settings.
+
 # Building
 The following steps were tested on MacOS 14.2.1, Xcode 15.2, iOS 17.0.3 (non jailbroken) with Instagram 316.1.0.
 

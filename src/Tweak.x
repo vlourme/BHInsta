@@ -126,6 +126,21 @@ static BOOL isAuthenticationShowed = FALSE;
 }
 %end
 
+// Tweak settings (newer versions)
+%hook IGProfileNavigationHeaderView
+- (void)didMoveToWindow {
+    %orig;
+    UIView *settingsButton = [self valueForKey:@"_sideTrayButton"];
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(settingsButtonLongPressed:)];
+    [settingsButton addGestureRecognizer:longPress];
+}
+
+%new - (void)settingsButtonLongPressed:(UIButton *)sender {
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[[SettingsViewController alloc] init]];
+    [self.viewController presentViewController:navVC animated:true completion:nil];
+}
+%end
+
 // Hide suggested reels
 %hook _IGListScrollWhileAnimateCollectionView
 - (void)_didModifySections:(id)arg1 {
