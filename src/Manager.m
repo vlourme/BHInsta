@@ -53,6 +53,9 @@
 + (BOOL)hideSuggestedReels {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_suggested_reels"];
 }
++ (BOOL)removeFeedPosts {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_feed_posts"];
+}
 + (BOOL)noScreenShotAlert {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_screenshot_alert"];
 }

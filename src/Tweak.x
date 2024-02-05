@@ -31,6 +31,17 @@ static void showConfirmation(void (^okHandler)(void)) {
 
 static NSArray *removeAdsItemsInList(NSArray *list) {
     NSMutableArray *orig = [list mutableCopy];
+    
+    if ([BHIManager removeFeedPosts]) {
+        NSMutableArray *storiesOnly = [NSMutableArray new];
+
+        if ([orig count] > 0) {
+            [storiesOnly addObject:orig[0]]; // append only stories block
+        }
+
+        return storiesOnly;
+    }
+
     [orig enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if ([BHIManager removeSuggestedPost]) {
             if ([obj respondsToSelector:@selector(explorePostInFeed)] && [obj performSelector:@selector(explorePostInFeed)]) {
@@ -48,6 +59,7 @@ static NSArray *removeAdsItemsInList(NSArray *list) {
             [orig removeObjectAtIndex:idx];
         }
     }];
+
     return [orig copy];
 }
 

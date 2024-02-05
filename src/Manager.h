@@ -19,6 +19,7 @@
 + (BOOL)hideReelsTab;
 + (BOOL)removeExplorePosts;
 + (BOOL)hideSuggestedReels;
++ (BOOL)removeFeedPosts;
 + (BOOL)noScreenShotAlert;
 + (BOOL)unlimitedReplay;
 + (BOOL)noSeenReceipt;
