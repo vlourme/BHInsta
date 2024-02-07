@@ -5,7 +5,7 @@ An awesome tweak for Instagram!
 - Hide Ads
 - No suggested post
 - Show Like count
-- Confirm like
+- Confirm dialog for likes, follow and calls
 - Copy description
 - Download Videos
 - Save profile image
@@ -14,7 +14,10 @@ An awesome tweak for Instagram!
 - Remove screenshot alert
 - Unlimited replay of once story
 - Disable Story Seen Receipt
-- [WIP] Focus mode (hide reels, explore, suggested reels and profile, etc.)
+- Focus mode (Inspired from stopped Threads for Instagram app)
+    - Hide Reels tab
+    - Hide every Explore posts
+    - Hide every main feed posts
 - Padlock
 
 ### Accessing the settings

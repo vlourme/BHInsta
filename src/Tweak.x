@@ -29,10 +29,10 @@ static void showConfirmation(void (^okHandler)(void)) {
     [topMostController() presentViewController:alert animated:YES completion:nil];
 }
 
-static NSArray *removeAdsItemsInList(NSArray *list) {
+static NSArray *removeAdsItemsInList(NSArray *list, BOOL isFeed) {
     NSMutableArray *orig = [list mutableCopy];
     
-    if ([BHIManager removeFeedPosts]) {
+    if (isFeed && [BHIManager removeFeedPosts]) {
         NSMutableArray *storiesOnly = [NSMutableArray new];
 
         if ([orig count] > 0) {
@@ -526,7 +526,15 @@ static BOOL isAuthenticationShowed = FALSE;
 %hook IGMainFeedListAdapterDataSource
 - (NSArray *)objectsForListAdapter:(id)arg1 {
     if ([BHIManager hideAds]) {
-        return removeAdsItemsInList(%orig);
+        return removeAdsItemsInList(%orig, YES);
+    }
+    return %orig;
+}
+%end
+%hook IGContextualFeedViewController
+- (NSArray *)objectsForListAdapter:(id)arg1 {
+    if ([BHIManager hideAds]) {
+        return removeAdsItemsInList(%orig, NO);
     }
     return %orig;
 }
@@ -534,7 +542,7 @@ static BOOL isAuthenticationShowed = FALSE;
 %hook IGVideoFeedViewController
 - (NSArray *)objectsForListAdapter:(id)arg1 {
     if ([BHIManager hideAds]) {
-        return removeAdsItemsInList(%orig);
+        return removeAdsItemsInList(%orig, NO);
     }
     return %orig;
 }
@@ -542,7 +550,7 @@ static BOOL isAuthenticationShowed = FALSE;
 %hook IGChainingFeedViewController
 - (NSArray *)objectsForListAdapter:(id)arg1 {
     if ([BHIManager hideAds]) {
-        return removeAdsItemsInList(%orig);
+        return removeAdsItemsInList(%orig, NO);
     }
     return %orig;
 }
