@@ -24,6 +24,9 @@
 + (BOOL)removeFeedPost {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_feed_post"];
 }
++ (BOOL)removeExplorePost {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_explore_post"];
+}
 + (BOOL)showLikeCount {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"show_like_count"];
 }

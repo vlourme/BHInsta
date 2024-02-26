@@ -10,6 +10,7 @@
 + (BOOL)removeSuggestedAccounts;
 + (BOOL)removeSuggestedReels;
 + (BOOL)removeFeedPost;
++ (bool)removeExplorePost;
 + (BOOL)showLikeCount;
 + (BOOL)postLikeConfirmation;
 + (BOOL)reelsLikeConfirmation;
