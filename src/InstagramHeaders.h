@@ -39,6 +39,9 @@
 @interface IGTabBar: UIView
 @end
 
+@interface IGTabBar: UIView
+@end
+
 @interface IGTableViewCell: UITableViewCell
 - (id)initWithReuseIdentifier:(NSString *)identifier;
 @end
