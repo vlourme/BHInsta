@@ -19,6 +19,7 @@
 + (BOOL)stickerInteractConfirmation;
 + (BOOL)postCommentConfirmation;
 + (BOOL)copyDecription;
++ (BOOL)removeReelsTab;
 + (BOOL)noRecentSearches;
 + (BOOL)hideExploreGrid;
 + (BOOL)hideTrendingSearches;
