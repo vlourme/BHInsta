@@ -23,8 +23,8 @@
 + (BOOL)removeSuggestedReels {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"no_suggested_reels"];
 }
-+ (BOOL)removeSuggestedThreads {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"no_suggested_threads"];
++ (BOOL)removeFeedPost {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"remove_feed_post"];
 }
 + (BOOL)postLikeConfirmation {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"like_confirm"];

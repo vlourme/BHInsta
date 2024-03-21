@@ -110,7 +110,11 @@
             [self newSwitchCellWithTitle:@"No suggested reels" detailTitle:@"Hides suggested reels to watch" key:@"no_suggested_reels" defaultValue:false changeAction:nil],
             [self newSwitchCellWithTitle:@"No suggested threads posts" detailTitle:@"Hides suggested threads posts" key:@"no_suggested_threads" defaultValue:true changeAction:nil],
             
-            // Section 3: Confirm actions
+            // Section 3: Focus
+            [self newSectionWithTitle:@"Focus" footer:nil],
+            [self newSwitchCellWithTitle:@"Remove feed posts" detailTitle:@"Remove every posts in main feed" key:@"remove_feed_post" defaultValue:false changeAction:nil],
+
+            // Section 4: Confirm actions
             [self newSectionWithTitle:@"Confirm actions" footer:nil],
             [self newSwitchCellWithTitle:@"Confirm like: Posts" detailTitle:@"Shows an alert when you click the like button on posts to confirm the like" key:@"like_confirm" defaultValue:false changeAction:nil],
             [self newSwitchCellWithTitle:@"Confirm like: Reels" detailTitle:@"Shows an alert when you click the like button on reels to confirm the like" key:@"like_confirm_reels" defaultValue:false changeAction:nil],
@@ -120,12 +124,12 @@
             [self newSwitchCellWithTitle:@"Confirm sticker interaction" detailTitle:@"Shows an alert when you click a sticker on someone's story to confirm the action" key:@"sticker_interact_confirm" defaultValue:false changeAction:nil],
             [self newSwitchCellWithTitle:@"Confirm posting comment" detailTitle:@"Shows an alert when you click the post comment button to confirm" key:@"post_comment_confirm" defaultValue:false changeAction:nil],
 
-            // Section 4: Save media
+            // Section 5: Save media
             [self newSectionWithTitle:@"Save media" footer:nil],
             [self newSwitchCellWithTitle:@"Download images/videos" detailTitle:@"Download images/videos on long press" key:@"dw_videos" defaultValue:true changeAction:nil],
             [self newSwitchCellWithTitle:@"Save profile image" detailTitle:@"Save profile image on long press" key:@"save_profile" defaultValue:true changeAction:nil],
 
-            // Section 5: Stories and Messages
+            // Section 6: Stories and Messages
             [self newSectionWithTitle:@"Story and Messages" footer:nil],
             [self newSwitchCellWithTitle:@"Keep deleted message" detailTitle:@"Keeps deleted direct messages in the chat" key:@"keep_deleted_message" defaultValue:true changeAction:nil],
             [self newSwitchCellWithTitle:@"Unlimited replay of direct stories" detailTitle:@"Replays direct messages normal/once stories unlimited times" key:@"unlimited_replay" defaultValue:false changeAction:nil],
@@ -133,15 +137,15 @@
             [self newSwitchCellWithTitle:@"Remove screenshot alert" detailTitle:@"Removes the alert notifying others that you screenshotted a direct story" key:@"remove_screenshot_alert" defaultValue:true changeAction:nil],
             [self newSwitchCellWithTitle:@"Disable story seen receipt" detailTitle:@"Hides the notification for others when you view their story" key:@"no_seen_receipt" defaultValue:false changeAction:nil],
 
-            // Section 6: Security
+            // Section 7: Security
             [self newSectionWithTitle:@"Security" footer:nil],
             [self newSwitchCellWithTitle:@"Padlock" detailTitle:@"Locks Instagram with biometrics/password" key:@"padlock" defaultValue:false changeAction:nil],
 
-            // Section 7: Debugging
+            // Section 8: Debugging
             [self newSectionWithTitle:@"Debugging" footer:nil],
             [self newSwitchCellWithTitle:@"Enable FLEX gesture" detailTitle:@"Allows you to hold 5 fingers on the screen to open the FLEX explorer" key:@"flex_instagram" defaultValue:false changeAction:@selector(FLEXAction:)],
 
-            // Section 8: Credits
+            // Section 9: Credits
             [self newSectionWithTitle:@"Credits" footer:[NSString stringWithFormat:@"SCInsta %@", SCIVersionString]],
             [self newHBTwitterCellWithTitle:@"Developer" twitterUsername:@"SoVeryCuul" customAvatarURL:@"https://unavatar.io/twitter/SoVeryCuul"],
             [self newHBTwitterCellWithTitle:@"Upstream Dev" twitterUsername:@"BandarHL" customAvatarURL:@"https://unavatar.io/twitter/BandarHL"],
