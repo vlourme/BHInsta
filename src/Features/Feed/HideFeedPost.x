@@ -4,7 +4,7 @@
 // Hide feed post (keep the first elements: stories bar)
 %hook IGMainFeedListAdapterDataSource
 - (NSArray *)objectsForListAdapter:(id)arg1 {
-    if ([BHIManager removeFeedPost]) {
+    if ([SCIManager removeFeedPost]) {
         NSMutableArray *objects = [%orig mutableCopy];
 
         if (objects.count > 1) {
